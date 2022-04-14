@@ -7,6 +7,9 @@ import com.example.product.repo.ProductRepo;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -18,6 +21,9 @@ public class ProductService {
     public ProductService (ProductRepo productRepo) {
         this.productRepo = productRepo;
     }
+
+    DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+
 
     public Iterable<Product> getAllProducts(Pageable pageable) {
         return productRepo.findAll(pageable);
@@ -38,6 +44,8 @@ public class ProductService {
 
 
     public Product create(Product product) {
+        product.setCreateDate(dateFormat.format(new Date()));
+        product.setUpdateDate(dateFormat.format(new Date()));
         return productRepo.save(product);
     }
 

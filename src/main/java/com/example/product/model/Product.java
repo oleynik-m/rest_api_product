@@ -38,12 +38,14 @@ public class Product {
     List<String> formatStrings = Arrays.asList("yyyy-MM-dd","M/y", "M/d/y", "M-d-y");
 
 
-    public Product(String name, String description, BigDecimal amount, Date createDate, Date updateDate) {
+
+
+    public Product(String name, String description, BigDecimal amount, Currency currency, Language language) {
         this.name = name;
         this.description = description;
         this.amount = amount;
-        this.createDate = createDate;
-        this.updateDate = updateDate;
+        this.currency = currency;
+        this.language = language;
     }
 
     public Product () {
