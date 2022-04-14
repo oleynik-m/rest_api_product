@@ -37,4 +37,4 @@ errorMessage.
 2. docker-compose build
 3. docker-compose up
 
-Для выполнения запросов зайти в swagger - http://localhost:8000/swagger-ui/index.htm
+Для выполнения запросов зайти в swagger - http://localhost:8000/swagger-ui/index.html
