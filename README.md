@@ -31,3 +31,10 @@ errorMessage.
 аннотации @ExceptionHandler.
 Исключительные ситуации должны быть залогированы.
 Все методы этого ресурса должны требовать указания конкретного языка и валюты.
+
+Для запуска docker-compose:
+1. cd src/main/docker
+2. docker-compose build
+3. docker-compose up
+
+Для выполнения запросов зайти в swagger - http://localhost:8000/swagger-ui/index.htm
